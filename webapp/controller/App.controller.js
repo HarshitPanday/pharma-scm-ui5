@@ -1,0 +1,23 @@
+sap.ui.define(["./BaseController"], function (B) {
+  "use strict";
+  const phone = window.matchMedia("(max-width: 760px)"), tablet = window.matchMedia("(max-width: 1024px)");
+  return B.extend("pharma.scm.controller.App", {
+    onInit: function () {
+      this.getRouter().attachRouteMatched(e => this.byId("sideNav").setSelectedKey(e.getParameter("name")));
+      // desktop: full side menu | tablet: icon-only rail | phone: hidden drawer opened via the menu button
+      this._fit = () => { const p = this.byId("toolPage"); p.removeStyleClass("navOpen"); p.setSideExpanded(phone.matches || !tablet.matches); };
+      this._fit();
+      phone.addEventListener("change", this._fit); tablet.addEventListener("change", this._fit);
+    },
+    onAfterRendering: function () {
+      const main = this.byId("toolPage").getDomRef().querySelector(".sapTntToolPageMain");
+      if (main && !main._bd) { // tap on the dimmed backdrop closes the phone drawer
+        main._bd = true;
+        main.addEventListener("click", e => { if (phone.matches && e.target === main) { this.byId("toolPage").removeStyleClass("navOpen"); } });
+      }
+    },
+    onSelect: function (e) { this.getRouter().navTo(e.getParameter("item").getKey()); this.byId("toolPage").removeStyleClass("navOpen"); },
+    onToggle: function () { this.byId("toolPage").toggleStyleClass("navOpen"); },
+    onAlerts: function () { this.getRouter().navTo("reports"); }
+  });
+});

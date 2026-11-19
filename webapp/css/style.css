@@ -1,0 +1,33 @@
+html,body{background:#f6f8fb}
+.sapMPage>section,.sapMPageBgStandard{background:#f6f8fb!important}
+.pageWrap{padding:1.25rem;box-sizing:border-box;max-width:1680px;margin:0 auto}
+.kpiGrid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-bottom:1rem}
+.chartGrid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:1rem;margin-bottom:1rem}
+.kpiGrid>div,.chartGrid>div{min-width:0;width:auto!important;margin:0!important}
+.kpiCard{background:#fff;border:1px solid #e5e9f0;border-radius:12px;padding:1rem 1.15rem;box-shadow:0 1px 2px rgba(16,24,40,.05);box-sizing:border-box;height:100%}
+.kpiLabel{font-size:.8125rem;color:#64748b;font-weight:600}
+.kpiValue{margin:.55rem 0 .2rem;display:block}
+.kpiValue .sapMObjectNumberText{font-size:1.9rem!important;font-weight:600;line-height:2.2rem}
+.kpiSub{font-size:.75rem;color:#94a3b8}
+.chartPanel{width:100%!important;margin:0!important;background:#fff;border:1px solid #e5e9f0;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.05);overflow:hidden}
+.cardTable{background:#fff;border:1px solid #e5e9f0;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.05);overflow:hidden;margin-bottom:1rem}
+.cardTable+.cardTable{margin-top:1rem}
+.sapMITBContent{background:transparent!important;padding:.75rem 0 0!important}
+.sapMITB{background:transparent}
+.sapMITBHead{background:#fff;border-radius:10px;border:1px solid #e5e9f0;padding:0 .5rem}
+.sapMMsgStrip{border-radius:10px}
+@media(max-width:600px){.pageWrap{padding:.75rem}.kpiGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}.kpiValue .sapMObjectNumberText{font-size:1.4rem!important}.kpiCard{padding:.75rem}}
+
+/* header */
+.sapMBtn.menuBtn{display:none}
+.hdrSub{color:#64748b;font-size:.8125rem;margin-left:.6rem}
+/* responsive side navigation: phone = overlay drawer */
+.sapTntToolPageRow{position:relative}
+@media(max-width:760px){
+ .sapMBtn.menuBtn{display:inline-block}
+ .hdrSub{display:none}
+ .sapTntToolPageAside{position:absolute!important;top:0;bottom:0;left:0;z-index:60;width:16.5rem!important;max-width:85%;transform:translateX(-110%);transition:transform .22s ease;box-shadow:0 8px 30px rgba(15,23,42,.25)}
+ .navOpen .sapTntToolPageAside{transform:translateX(0)}
+ .sapTntToolPageMain{position:relative;width:100%}
+ .navOpen .sapTntToolPageMain::after{content:"";position:absolute;inset:0;background:rgba(15,23,42,.35);z-index:50}
+}
