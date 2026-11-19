@@ -1,1 +1,13 @@
-{"name":"pharma-scm-ui5","version":"1.0.0","description":"Pharma Inventory & Supply Chain Management - SAPUI5 / Fiori","scripts":{"start":"ui5 serve -o index.html"},"devDependencies":{"@ui5/cli":"^3.11.0"}}
+
+{
+  "name": "pharma-scm-ui5",
+  "version": "1.0.0",
+  "description": "Pharma Inventory & Supply Chain Management - SAPUI5 / Fiori",
+  "scripts": {
+    "start": "ui5 serve -o index.html",
+    "build": "ui5 build --all --clean-dest"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^3.11.0"
+  }
+}
