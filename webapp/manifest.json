@@ -51,16 +51,15 @@
   "models": {
    "i18n": {
     "type": "sap.ui.model.resource.ResourceModel",
-    "settings": {
-     "bundleName": "pharma.scm.i18n.i18n"
-    }
-   },
+"settings":{"bundleName":"pharma.scm.i18n.i18n","supportedLocales":[""],"fallbackLocale":""} 
+  },
    "": {
     "dataSource": "mainService",
     "preload": true,
     "settings": {
      "defaultBindingMode": "OneWay",
      "useBatch": false
+     
     }
    }
   },

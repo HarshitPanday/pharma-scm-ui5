@@ -22,4 +22,22 @@
 <tnt:NavigationListItem text="10  Reports &amp; Alerts" icon="sap-icon://bar-chart" key="reports"/>
 </tnt:NavigationList></tnt:SideNavigation></tnt:sideContent>
 <tnt:mainContents><NavContainer id="pageContainer"/></tnt:mainContents>
-</tnt:ToolPage></mvc:View>
+</tnt:ToolPage>
+
+<VBox id="scrim" class="phoneScrim"/>
+<VBox id="drawer" class="phoneDrawer">
+<HBox alignItems="Center" class="drawerHead"><core:Icon src="sap-icon://pharmacy" color="#2563eb" size="1.5rem" class="sapUiTinyMarginEnd"/><Title text="PharmaSCM"/></HBox>
+<tnt:NavigationList id="drawerNav" itemSelect=".onSelect">
+<tnt:NavigationListItem text="01  Dashboard &amp; Analytics" icon="sap-icon://home" key="dashboard"/>
+<tnt:NavigationListItem text="02  Medicine Master" icon="sap-icon://pharmacy" key="medicines"/>
+<tnt:NavigationListItem text="03  Batch &amp; Expiry" icon="sap-icon://product" key="batches"/>
+<tnt:NavigationListItem text="04  Purchase Management" icon="sap-icon://cart" key="purchase"/>
+<tnt:NavigationListItem text="05  Inventory Management" icon="sap-icon://inventory" key="inventory"/>
+<tnt:NavigationListItem text="06  Warehouse Management" icon="sap-icon://building" key="warehouse"/>
+<tnt:NavigationListItem text="07  Vendor &amp; Customer" icon="sap-icon://group" key="partners"/>
+<tnt:NavigationListItem text="08  Sales &amp; Distribution" icon="sap-icon://shipping-status" key="sales"/>
+<tnt:NavigationListItem text="09  Quality Management" icon="sap-icon://quality-issue" key="quality"/>
+<tnt:NavigationListItem text="10  Reports &amp; Alerts" icon="sap-icon://bar-chart" key="reports"/>
+</tnt:NavigationList>
+</VBox>
+</mvc:View>
